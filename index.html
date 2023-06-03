@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="sub-container">
+      <div class="budget">
+        <h2>BUDGET</h2>
+        <p id="bgt-error">Budget shold not be empty or negative value enter</p>
+        <label for="totalAmount">Total Amount:</label>
+        <input type="number" placeholder="Enter Total Amount" id="totalAmount">
+        <button id="btn-budget" onclick="setBudget()">Set Budget</button>
+      </div>
+      <div class="expense">
+        <h2>Add Expense</h2>
+        <p id="bgt-error2">Expense should not be empty</p>
+        <label for="exp-categories">Category:</label>
+        <input type="text" placeholder="Enter Title Of Product" id="exp-categories">
+        <label for="expenseAmount">Expense:</label>
+        <input type="number" placeholder="Enter Expense Amount" id="expenseAmount">
+        <button id="btn-checkamount" onclick="addExpenses()">Add Expense</button>
+      </div>
+    </div>
+    <div class="show">
+      <div class="sub-show">
+        <h3>Total</h3>
+        <p id="show-total">0</p>
+      </div>
+      <div class="sub-show">
+        <h3>Expense</h3>
+        <p id="show-expense">0</p>
+      </div>
+      <div class="sub-show">
+        <h3>Balance</h3>
+        <p id="show-balance">0</p>
+      </div>
+    </div>
+
+    <div>
+      <table id="expenseTable">
+        <h2>Expenses</h2>
+        <tr>
+          <th>Category</th>
+          <th>Expense</th>
+          <th>Date</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+ 
+  <script src="app.js"></script>
+</body>
+
+</html>
